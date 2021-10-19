@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glyochi e-portfolio</title>
+    <link href="styles/main.css" rel="stylesheet" type="text/css" />
+    <style>
+        @media (min-width: 1380px) {
+            .intro {
+                margin: 30px 120px;
+                background-color: rgb(167, 163, 163, 0.7);
+                opacity: 100%;
+                min-width: 1100px;
+                display: flex;
+                justify-content: center;
+                padding: 50px 20px;
+                border-radius: 30px;
+            }
+
+            .croppedContainer {
+                display: inline-block;
+                padding: 20px;
+                margin-left: 80px;
+                padding-left: 60px;
+                padding-right: 20px;
+            }
+
+            .cropped {
+                width: 300px;
+                height: 300px;
+                overflow: hidden;
+                border: none;
+                border-radius: 100%;
+            }
+
+            .cropped>img {
+                transition-timing-function: ease-out;
+                transition-duration: 0.15s;
+                height: 266.66666%;
+                width: 200%;
+                margin: -40% 0 0 -60%;
+            }
+
+            .cropped>img:hover {
+                transition-timing-function: ease-out;
+                transition-duration: 0.15s;
+                height: 336%;
+                width: 252%;
+                margin: -64% 0 0 -90%;
+                border-color: honeydew;
+                border-style: solid;
+            }
+
+            .aboutMe {
+                min-width: 600px;
+                max-width: 800px;
+                margin-right: 60px;
+                padding-left: 40px;
+                padding-right: 60px;
+            }
+
+            .aboutMe>p {
+                font-size: 18px;
+                padding: 30px 0;
+            }
+
+            .skills {
+                margin: 30px 120px;
+                background-color: rgb(167, 163, 163, 0.7);
+                opacity: 100%;
+                min-width: 1100px;
+                padding: 50px 20px;
+                border-radius: 30px;
+            }
+
+            .skills>ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .skills>ul>li {
+                display: block;
+            }
+
+            footer>center>a {
+                border-radius: 20px;
+                padding: 5px 10px;
+                width: fit-content;
+                background-color: grey;
+                font-weight: bold;
+            }
+
+            .background:hover {
+                transition-timing-function: ease-out;
+                transition-duration: 0.2s;
+                background-color: rgb(107, 98, 98)
+            }
+
+            .background {
+                transition-timing-function: ease-in;
+                transition-duration: 0.2s;
+                background-color: rgb(167, 163, 163, 0.7);
+                ;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .intro {
+                background-color: rgb(107, 98, 98, 0.7);
+                opacity: 100%;
+                display: flex;
+                justify-content: center;
+                padding: 50px 20px;
+                border-radius: 30px;
+                margin: 20px 20px;
+                margin: 20px max(20px, 6%);
+            }
+
+            .croppedContainer {
+                display: none;
+            }
+
+            .aboutMe>p {
+                margin: 5px;
+                font-size: 18px;
+            }
+
+            .aboutMe h1 {
+                font-size: 26px;
+            }
+
+            .skills {
+                background-color: rgb(107, 98, 98);
+                background-color: rgb(107, 98, 98, 0.7);
+                opacity: 100%;
+                padding: 10px 20px;
+                margin: 20px 20px;
+                margin: 20px max(20px, 6%);
+                border-radius: 30px;
+            }
+
+            .skills>ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-top: -20px;
+            }
+
+            .skills>ul>li {
+                display: block;
+            }
+
+            footer>center>a {
+                border-radius: 20px;
+                padding: 5px 10px;
+                width: fit-content;
+                background-color: grey;
+                font-weight: bold;
+            }
+        }
+
+        @media (min-width: 600px) and (max-width: 1380px) {
+            .intro {
+                background-color: rgb(107, 98, 98);
+                background-color: rgb(107, 98, 98, 0.7);
+                opacity: 100%;
+                display: flex;
+                flex-direction: column;
+                padding: 50px 20px;
+                border-radius: 30px;
+                margin: 20px 20px;
+                margin: 30px max(20px, 6%);
+            }
+
+            .croppedContainer {
+                display: block;
+                margin: auto;
+            }
+
+            .cropped {
+                width: 300px;
+                height: 300px;
+                overflow: hidden;
+                border: none;
+                border-radius: 100%;
+            }
+
+            .cropped>img {
+                transition-timing-function: ease-out;
+                transition-duration: 0.15s;
+                height: 266.66666%;
+                width: 200%;
+                margin: -40% 0 0 -60%;
+            }
+
+            .cropped>img:hover {
+                transition-timing-function: ease-out;
+                transition-duration: 0.15s;
+                height: 336%;
+                width: 252%;
+                margin: -64% 0 0 -90%;
+                border-color: honeydew;
+                border-style: solid;
+            }
+
+            .aboutMe>p {
+                margin: 5px;
+                font-size: 18px;
+                min-width: 400px;
+            }
+
+            .aboutMe h1 {
+                font-size: 26px;
+            }
+
+            .skills {
+                background-color: rgb(107, 98, 98);
+                background-color: rgb(107, 98, 98, 0.7);
+                opacity: 100%;
+                padding: 10px 20px;
+                margin: 20px 20px;
+                margin: 20px max(20px, 6%);
+                border-radius: 30px;
+            }
+
+            .skills>ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-top: -20px;
+            }
+
+            .skills>ul>li {
+                display: block;
+            }
+
+            footer>center>a {
+                border-radius: 20px;
+                padding: 5px 10px;
+                width: fit-content;
+                background-color: grey;
+                font-weight: bold;
+            }
+        }
+    </style>
+
+    <title>Vũ Hoàng Dương</title>
+</head>
+
+<body>
+
+
+
+
+    <header class="flexContainer">
+        <nav class="flexInner">
+            <ul class="flexContainer ">
+                <li><a class="navLink flexInner" href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <!-- might change li to div incase not working will investigate later -->
+
+                    <button class="dropdownBtn">
+                        <a class="navLink flexInner">Resume</a>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="Resume.html">View online</a>
+                        <a href="materials/resume.pdf" download>Download</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <button class="dropdownBtn">
+                        <a class="navLink flexInner">Projects</a>
+
+                    </button>
+                    <div class="dropdown-content">
+                        <a href=>Making a website</a>
+                        <a href="Tetris.html">Tetris</a>
+                        <!-- <a href=>Project 3</a> -->
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="flexInner spacer">
+            <!-- this div only serves as a spacer? -->
+        </div>
+
+        <button class="flexInner contact"><a href="mailto: duongvh1806@gmail.com">Contact</a></button>
+
+
+    </header>
+    <div class="intro background">
+        <div class="croppedContainer">
+            <div class="cropped">
+                <img src="materials/profile pic.jpg" class="profilePic">
+            </div>
+        </div>
+
+        <div class="aboutMe">
+            <center>
+                <h1>Vũ Hoàng (Glyochi) Dương
+                </h1>
+            </center>
+            <p>
+                I'm an international student from Việt Nam and a junior majoring in Computer Science at Iowa State
+                University. I'm also a highly capable developer who can comfortably take on challenging tasks.<br>
+                <br> I spend most of my free time working on personal projects that require different skills. That's why
+                I must develop the habit of having a learning plan whenever I work on something new. This e-portfolio,
+                which was created after my
+                freshman year, serves as an example. You can find more about the making of this website or other
+                projects of mine by navigating to the <strong><i>Projects</i></strong> above.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="skills background">
+        <center>
+            <h1>Skills</h1> <br>
+ <ul>
+            <li>Java, C, C++, Javascript, Html5, CSS</li>
+            <!--<li>Familiar with Object Oriented Programming</li>-->
+            <!--<li>Basic website developing</li>-->
+
+        </ul>
+        </center>
+       
+
+    </div>
+
+    <footer>
+        <center><a>Copyright © Glyochi.vn 2020</a></center>
+    </footer>
+
+
+</body>
+
+</html>

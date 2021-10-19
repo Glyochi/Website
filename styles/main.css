@@ -1,0 +1,527 @@
+body {
+  font: Times;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: white;
+}
+
+/* 
+transition-duration for: returning to normal state: 0.8s if dropdown-content for lingering effect,
+else 0.2s 
+normal hovering: 0.35s;
+for hovering but on mobile(tap): 0.15s; */
+
+@media (min-width: 1380px) {
+  header {
+    margin: 0;
+    padding: 30px 0;
+    background-color: rgb(22, 22, 27);
+    height: 30px;
+  }
+  .contact {
+    padding: 10px 17px 10px 17px;
+    font-size: 22px;
+    border: none;
+    border-radius: 20px;
+  }
+  .contact > a {
+    transition-timing-function: ease-in;
+    transition-duration: 0.2s;
+    text-decoration: none;
+    color: rgb(13, 93, 3);
+    font-weight: bolder;
+  }
+  .contact:link {
+    transition-timing-function: ease-out;
+    transition-duration: 0.2s;
+    font-size: 22px;
+  }
+  .contact:hover a {
+    transition-timing-function: ease-out;
+    transition-duration: 0.2s;
+    color: white;
+    font-size: 30px;
+  }
+  .contact:hover {
+    transition-timing-function: ease-out;
+    transition-duration: 0.2s;
+    background-color: rgb(13, 93, 3);
+    font-size: 30px;
+  }
+  nav {
+    background-color: none;
+    margin: 0;
+    padding-left: 60px;
+    min-width: 900px;
+  }
+  nav > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-image: url("/materials/wallpaper.jpg");
+  }
+  .flexContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .flexInner {
+    display: inline-block;
+    font-size: 20px;
+    margin: 0 10% 0 0;
+  }
+  .navLink {
+    transition-timing-function: ease-out;
+    transition-duration: 0.2s;
+    color: white;
+    text-decoration: none;
+    padding: 0;
+  }
+  @media (hover: hover) {
+    .navLink:hover {
+      transition-timing-function: ease-out;
+      transition-duration: 0.35s;
+      font-size: 32px;
+      color: rgb(103, 212, 89);
+      border-radius: 10px;
+      padding: 3px 10px;
+    }
+    .navLink:active {
+      transition-timing-function: ease-out;
+      transition-duration: 0.35s;
+      background-color: ivory;
+      border-radius: 5px;
+      color: rgb(0, 0, 0);
+    }
+  }
+  @media (hover: none) {
+    .navLink:active {
+      transition-timing-function: ease-out;
+      transition-duration: 0.15s;
+      background-color: ivory;
+      border-radius: 5px;
+      color: rgb(0, 0, 0);
+    }
+  }
+  /* dropdown button */
+  .dropdown {
+    position: relative;
+    float: left;
+    background-color: none;
+  }
+  .dropdown > .dropdownBtn {
+    background-color: transparent;
+    border: none;
+  }
+  .dropdown-content {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+  }
+  .dropdown-content > a {
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.8s;
+    font-size: 20px;
+    display: block;
+    width: 110px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 5px 8px;
+    background-color: rgb(84, 85, 85);
+    text-align: center;
+    margin: 15px auto;
+    border-radius: 20px;
+  }
+  @media (hover: hover) {
+    .dropdown:hover > button > a {
+      transition-timing-function: ease-out;
+      transition-duration: 0.35s;
+      font-size: 32px;
+      color: rgb(103, 212, 89);
+      border-radius: 10px;
+      padding: 3px 10px;
+    }
+    .dropdown-content a:hover {
+      transition-timing-function: ease-out;
+      transition-duration: 0.35s;
+      font-weight: bolder;
+      color: rgb(0, 0, 0);
+      background-color: rgb(181, 238, 162);
+    }
+    .dropdown:hover > .dropdown-content {
+      display: block;
+      margin-left: auto;
+    }
+  }
+  @media (hover: none) {
+    .dropdown:hover > button > a {
+      transition-timing-function: ease-out;
+      transition-duration: 0.15s;
+      font-size: 32px;
+      color: rgb(103, 212, 89);
+      border-radius: 10px;
+      padding: 3px 10px;
+    }
+    .dropdown-content a:hover {
+      transition-timing-function: ease-out;
+      transition-duration: 0.15s;
+      font-weight: bolder;
+      color: rgb(0, 0, 0);
+      background-color: rgb(181, 238, 162);
+    }
+    .dropdown:hover > .dropdown-content {
+      display: block;
+      margin-left: auto;
+    }
+  }
+}
+
+/* Ipad sizeeeee Ipad sizeeeee Ipad sizeeeee Ipad sizeeeee Ipad sizeeeee Ipad sizeeeee Ipad sizeeeee Ipad sizeeeee  */
+
+@media (min-width: 600px) and (max-width: 1380px) {
+  header {
+    margin: 0;
+    padding: 30px 0;
+    background-color: rgb(22, 22, 27);
+    height: 30px;
+    min-width: 375px;
+  }
+  .contact {
+    padding: 8px 10px 8px 10px;
+    border: none;
+    border-radius: 20px;
+  }
+  .contact > a {
+    transition-timing-function: ease-in;
+    transition-duration: 0.2s;
+    text-decoration: none;
+    color: rgb(13, 93, 3);
+    font-size: 25px;
+  }
+  .contact:active > a {
+    transition-timing-function: ease-out;
+    transition-duration: 0.2s;
+    color: white;
+  }
+  .contact:active {
+    transition-timing-function: ease-out;
+    transition-duration: 0.2s;
+    background-color: rgb(13, 93, 3);
+  }
+  nav {
+    background-color: none;
+    margin: 0;
+  }
+  nav > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-image: url("/materials/wallpaper.jpg");
+    background-size: auto 130%;
+    background-position: -100px 0;
+  }
+  .flexContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .flexInner {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 8%;
+  }
+  .flexInner a {
+    margin: 8px;
+  }
+  .flexContainer > li {
+    padding: 7px 10px;
+  }
+  .navLink {
+    transition-timing-function: ease-in;
+    transition-duration: 0.2s;
+    padding: 0;
+    color: white;
+    text-decoration: none;
+  }
+  @media (hover: hover) {
+    .navLink:hover {
+      transition-timing-function: ease-out;
+      transition-duration: 0.35s;
+      font-size: 32px;
+      color: rgb(103, 212, 89);
+      border-radius: 10px;
+      padding: 3px 10px;
+    }
+    .navLink:active {
+      transition-timing-function: ease-out;
+      transition-duration: 0.35s;
+      background-color: ivory;
+      border-radius: 5px;
+      color: rgb(0, 0, 0);
+    }
+  }
+  @media (hover: none) {
+    .navLink:hover {
+      transition-timing-function: ease-out;
+      transition-duration: 0.15s;
+      font-size: 25px;
+      color: rgb(103, 212, 89);
+      border-radius: 10px;
+      padding: 3px 10px;
+    }
+  }
+  /* dropdown button */
+  .dropdown {
+    position: relative;
+    float: left;
+  }
+  .dropdown > .dropdownBtn {
+    background-color: transparent;
+    border: none;
+  }
+  .dropdown-content {
+    width: 110px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    padding-top: 10px;
+    margin-left: auto;
+  }
+  .dropdown-content > a {
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.8s;
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px 10px;
+    background-color: rgb(84, 85, 85);
+    text-align: center;
+    margin: 10px 18px;
+    border-radius: 20px;
+  }
+  /* This works perfectly just have to change href using javascript when using mobile devices */
+  @media (hover: hover) {
+    .dropdown:hover > button > a {
+      transition-timing-function: ease-out;
+      transition-duration: 0.35s;
+      font-size: 32px;
+      color: rgb(103, 212, 89);
+      border-radius: 10px;
+      padding: 3px 10px;
+    }
+    .dropdown-content a:hover {
+      transition-timing-function: ease-out;
+      transition-duration: 0.35s;
+      color: rgb(0, 0, 0);
+      background-color: rgb(181, 238, 162);
+    }
+    .dropdown:hover > .dropdown-content {
+      display: block;
+      margin-left: auto;
+    }
+  }
+  @media (hover: none) {
+    .dropdown:hover > button > a {
+      transition-timing-function: ease-out;
+      transition-duration: 0.15s;
+      font-size: 25px;
+      color: rgb(103, 212, 89);
+      border-radius: 10px;
+      padding: 3px 10px;
+    }
+    .dropdown-content a:hover {
+      transition-timing-function: ease-out;
+      transition-duration: 0.15s;
+      font-weight: bolder;
+      color: rgb(0, 0, 0);
+      background-color: rgb(181, 238, 162);
+    }
+    .dropdown:hover > .dropdown-content {
+      display: block;
+      margin-left: auto;
+      margin-top: 10px;
+    }
+  }
+}
+
+/* <600 px */
+
+@media (max-width: 600px) {
+  header {
+    margin: 0;
+    padding: 30px 0;
+    background-color: rgb(22, 22, 27);
+    height: 30px;
+    min-width: 375px;
+  }
+  .contact {
+    padding: 5px 8px 6px 8px;
+    border: none;
+    border-radius: 20px;
+  }
+  .contact > a {
+    transition-timing-function: ease-in;
+    transition-duration: 0.2s;
+    text-decoration: none;
+    color: rgb(13, 93, 3);
+    font-weight: bolder;
+    font-size: 18px;
+  }
+  .contact:link {
+    transition-timing-function: ease-out;
+    transition-duration: 0.2s;
+  }
+  .contact:active > a {
+    transition-timing-function: ease-out;
+    transition-duration: 0.2s;
+    color: white;
+  }
+  .contact:active {
+    transition-timing-function: ease-out;
+    transition-duration: 0.2s;
+    background-color: rgb(13, 93, 3);
+  }
+  nav {
+    background-color: none;
+    margin: 0;
+  }
+  nav > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-image: url("/materials/wallpaper.jpg");
+  }
+  .flexContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .flexInner {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 2%;
+  }
+  .flexContainer > li {
+    padding: 7px 10px;
+  }
+  .navLink {
+    transition-timing-function: ease-in;
+    transition-duration: 0.2s;
+    padding: 0;
+    color: white;
+    text-decoration: none;
+  }
+  @media (hover: hover) {
+    .navLink:hover {
+      transition-timing-function: ease-out;
+      transition-duration: 0.35s;
+      font-size: 15px;
+      color: rgb(103, 212, 89);
+      border-radius: 10px;
+      padding: 3px 10px;
+    }
+    .navLink:active {
+      transition-timing-function: ease-out;
+      transition-duration: 0.35s;
+      background-color: ivory;
+      border-radius: 5px;
+      color: rgb(0, 0, 0);
+    }
+  }
+  @media (hover: none) {
+    .navLink:hover {
+      transition-timing-function: ease-out;
+      transition-duration: 0.15s;
+      font-size: 15px;
+      color: rgb(103, 212, 89);
+      border-radius: 10px;
+      padding: 3px 10px;
+      background-color: ivory;
+    }
+  }
+  /* dropdown button */
+  .dropdown {
+    position: relative;
+    float: left;
+    background-color: none;
+  }
+  .dropdown > .dropdownBtn {
+    background-color: transparent;
+    border: none;
+  }
+  .dropdown-content {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+  }
+  .dropdown-content > a {
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.8s;
+    font-size: 15px;
+    display: block;
+    width: 100px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 5px 8px;
+    background-color: rgb(84, 85, 85);
+    text-align: center;
+    margin: 10px -20px;
+    border-radius: 20px;
+  }
+  @media (hover: hover) {
+    .dropdown:hover > button > a {
+      transition-timing-function: ease-out;
+      transition-duration: 0.35s;
+      font-size: 15px;
+      color: rgb(103, 212, 89);
+      border-radius: 10px;
+      padding: 3px 10px;
+    }
+    .dropdown-content a:hover {
+      transition-timing-function: ease-out;
+      transition-duration: 0.35s;
+      color: rgb(0, 0, 0);
+      background-color: rgb(181, 238, 162);
+    }
+    .dropdown:hover > .dropdown-content {
+      display: block;
+      margin-left: 6px;
+    }
+  }
+  @media (hover: none) {
+    .dropdown:hover > button > a {
+      transition-timing-function: ease-out;
+      transition-duration: 0.15s;
+      font-size: 15px;
+      color: rgb(103, 212, 89);
+      border-radius: 10px;
+      padding: 3px 10px;
+    }
+    .dropdown-content a:hover {
+      transition-timing-function: ease-out;
+      transition-duration: 0.15s;
+      font-weight: bolder;
+      color: rgb(0, 0, 0);
+      background-color: rgb(181, 238, 162);
+    }
+    .dropdown:hover > .dropdown-content {
+      display: block;
+      margin-left: 6px;
+      /* additional spacing so that u dont accidentally click stuffs */
+      margin-top: 10px;
+    }
+  }
+}

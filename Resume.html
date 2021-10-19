@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glyochi e-portfolio</title>
+    <link href="styles/main.css" rel="stylesheet" type="text/css" />
+    <style>
+        @media (min-width: 1380px) {
+            img {
+                margin: 5% 20%;
+                width: 60%;
+                height: 100%;
+            }
+            body {
+                background-size: auto 100%;
+            }
+        }
+        
+        @media (min-width: 600px) and (max-width: 1380px) {
+            img {
+                margin: 5% 15%;
+                width: 70%;
+                height: 100%;
+            }
+            body {
+                background-size: auto 100%;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            img {
+                margin: 5% 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    </style>
+
+    <title>Vũ Hoàng Dương</title>
+</head>
+
+<body>
+
+
+
+
+    <header class="flexContainer">
+        <nav class="flexInner">
+            <ul class="flexContainer ">
+                <li><a class="navLink flexInner" href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <!-- might change li to div incase not working will investigate later -->
+
+                    <button class="dropdownBtn">
+                        <a class="navLink flexInner" href="Resume.html" target="_blank">Resume</a>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="Resume.html">View online</a>
+                        <a href="materials/resume.pdf" download>Download</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <button class="dropdownBtn">
+                        <a class="navLink flexInner" href="Projects.html">Projects</a>
+
+                    </button>
+                    <div class="dropdown-content">
+                        <a href=>Making a website</a>
+                        <a href=>Project 2</a>
+                        <a href=>Project 3</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="flexInner spacer">
+            <!-- this div only serves as a spacer? -->
+        </div>
+
+        <button class="flexInner contact"><a href="mailto: duongvh1806@gmail.com">Contact</a></button>
+
+
+    </header>
+
+
+    <img src="materials/Resume.jpg">
+</body>
+
+
+
+</html>
